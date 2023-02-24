@@ -4,7 +4,7 @@ MAIN
 # %% --------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
 
-NUM_THREADS = 20
+NUM_THREADS = 10
 GRAINS_FILE = "input_grainsfile.csv"
 PATH_NEML   = '/home/omux/moose/neml'
 
@@ -56,9 +56,9 @@ os.chdir(PATH_OUTPUT)
 print('------------------------------------')
 print('./> LOADING CONDITIONS')
 print('------------------------------------')
-EMAX = 0.10 # Maximum strain
-NSTEPS = 300 # Number of steps
-ERATE = 1.0e-4 # Strain rate
+EMAX   = 0.10 # Maximum strain
+NSTEPS = 100 # Number of steps
+ERATE  = 1.0e-4 # Strain rate
 # -----------------------------------------------------------------------------------
 # MATERIAL PARAMETERS
 # -----------------------------------------------------------------------------------
@@ -69,11 +69,11 @@ YOUNGS      = 211000    # IsotropicLinearElasticModel
 POISSONS    = 0.30      # IsotropicLinearElasticModel
 SHEAR       = 81000.0   # E / (2 * (1 + nu)) # Shear modulus
 # Asaro Inelasticity
-VSH_TAU_SAT = 30     # VoceSlipHardening
-VSH_B       = 60.0   # VoceSlipHardening
-VSH_TAU_0   = 20     # VoceSlipHardening
+VSH_TAU_SAT = 100     # VoceSlipHardening
+VSH_B       = 5  # VoceSlipHardening
+VSH_TAU_0   = 50     # VoceSlipHardening
 AI_GAMMA0   = 0.001  # PowerLawSlipRule
-AI_N        = 12     # PowerLawSlipRule
+AI_N        = 1     # PowerLawSlipRule
 # Lattice & Slip Systems
 LATTICE_A   = 1.0
 SLIP_DIRECTION = [1, 1, 0]
@@ -96,12 +96,19 @@ print('NUMBER OF GRAINS =', len(GRAIN_ORIENTATIONS))
 # RUN SIMULATIONS
 # -----------------------------------------------------------------------------------
 print('------------------------------------')
-print('./> RUNNING SIMULATION')
+print('./> RUNNING SIMULATION 1')
 print('------------------------------------')
 cpmodel = cpmodel_fcc_voce(PATH_NEML, YOUNGS, POISSONS, LATTICE_A, SLIP_DIRECTION, SLIP_PLANE,
                            VSH_TAU_SAT, VSH_B, VSH_TAU_0, AI_GAMMA0, AI_N,
                            GRAIN_ORIENTATIONS, NUM_THREADS)
 result1 = drivers.uniaxial_test(cpmodel, ERATE, emax=EMAX, nsteps=NSTEPS)
+print(result1.keys())
+# Save results into a csv file with column names
+np.savetxt('output_result1_ccsurve.csv', np.column_stack(
+    (result1['strain'], result1['stress'], result1['energy_density'],
+     result1['plastic_work'])), delimiter=',', 
+     header='strain, stress, energy_density, plastic_work')
+
 print('------------------------------------')
 print('./> DONE')
 print('------------------------------------')
@@ -126,7 +133,7 @@ ax.text(0, 0, '  tau_sat = ' + str(VSH_TAU_SAT) + ' MPa' +
         '\n  gamma0 = ' + str(AI_GAMMA0) +
         '\n  n = ' + str(AI_N),
         fontsize=16, bbox={'facecolor': 'red', 'alpha': 0.5, 'pad': 10, })
-plt.savefig("ccsurve_result1.png")
+plt.savefig("output_result1_ccsurve.png")
 print('------------------------------------')
 print('./> DONE')
 print('------------------------------------')
@@ -135,12 +142,17 @@ print('------------------------------------')
 # RUN SIMULATIONS
 # -----------------------------------------------------------------------------------
 print('------------------------------------')
-print('./> RUNNING SIMULATION')
+print('./> RUNNING SIMULATION 2')
 print('------------------------------------')
 cpmodel = cpmodel_fcc_voce(PATH_NEML, YOUNGS, POISSONS, LATTICE_A, SLIP_DIRECTION, SLIP_PLANE,
                             VSH_TAU_SAT, VSH_B, VSH_TAU_0, AI_GAMMA0, AI_N,
                             GRAIN_ORIENTATIONS, NUM_THREADS)
 result2 = drivers.uniaxial_test(cpmodel, ERATE, emax=EMAX, nsteps=NSTEPS)
+# Save results into a csv file with column names
+np.savetxt('output_result2_ccsurve.csv', np.column_stack(
+    (result2['strain'], result2['stress'], result2['energy_density'],
+     result2['plastic_work'])), delimiter=',',
+    header='strain, stress, energy_density, plastic_work')
 print('------------------------------------')
 print('./> DONE')
 print('------------------------------------')
@@ -165,7 +177,7 @@ ax.text(0, 0, '  tau_sat = ' + str(VSH_TAU_SAT) + ' MPa' +
         '\n  gamma0 = ' + str(AI_GAMMA0) +
         '\n  n = ' + str(AI_N),
         fontsize=16, bbox={'facecolor': 'red', 'alpha': 0.5, 'pad': 10, })
-plt.savefig("ccsurve_result1.png")
+plt.savefig("output_result2_ccsurve.png")
 print('------------------------------------')
 print('./> DONE')
 print('------------------------------------')
