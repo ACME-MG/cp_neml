@@ -1,0 +1,77 @@
+
+<materials>
+	<CPMODEL1 type="SingleCrystalModel">
+		<kinematics type="StandardKinematicModel">
+			<emodel type="IsotropicLinearElasticModel">
+				<m1_type>youngs</m1_type>
+				<m1>211000</m1>
+				<m2_type>poissons</m2_type>
+				<m2>0.3</m2>
+			</emodel>
+			<imodel type="AsaroInelasticity">
+				<rule type="PowerLawSlipRule">
+					<resistance type="VoceSlipHardening">
+						<tau_sat>30</tau_sat>
+						<b>60.0</b>
+						<tau_0>20</tau_0>
+					</resistance>
+					<gamma0>0.001</gamma0>
+					<n>12</n>
+				</rule>
+			</imodel>
+		</kinematics>
+		<lattice type="CubicLattice">
+			<a>1.0</a>
+			<slip_systems>
+			1 1 0 ; 1 1 1
+			</slip_systems>
+		</lattice>
+	</CPMODEL1>
+	<MACROMODEL1 type="GeneralIntegrator">
+		<elastic type="IsotropicLinearElasticModel">
+			<m1 type="ConstantInterpolate">
+				<v>211000</v>
+			</m1>
+			<m1_type>youngs</m1_type>
+			<m2 type="ConstantInterpolate">
+				<v>0.3</v>
+			</m2>
+			<m2_type>poissons</m2_type>
+		</elastic>
+		<rule type="TVPFlowRule">
+			<elastic type="IsotropicLinearElasticModel">
+				<m1 type="ConstantInterpolate">
+					<v>211000</v>
+				</m1>
+				<m1_type>youngs</m1_type>
+				<m2 type="ConstantInterpolate">
+					<v>0.3</v>
+				</m2>
+				<m2_type>poissons</m2_type>
+			</elastic>
+			<flow type="PerzynaFlowRule">
+				<surface type="IsoJ2"/>
+				<hardening type="VoceIsotropicHardeningRule">
+					<s0 type="ConstantInterpolate">
+						<v>15.5</v>
+					</s0>
+					<R type="ConstantInterpolate">
+						<v>99.5</v>
+					</R>
+					<d type="ConstantInterpolate">
+						<v>136</v>
+					</d>
+				</hardening>
+				<g type="GPowerLaw">
+					<n type="ConstantInterpolate">
+						<v>12</v>
+					</n>
+					<eta type="ConstantInterpolate">
+						<v>147</v>
+					</eta>
+				</g>
+			</flow>
+		</rule>
+	</MACROMODEL1>
+
+</materials>
