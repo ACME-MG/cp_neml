@@ -1,6 +1,4 @@
 
-
-
 from neml.cp import crystallography, slipharden, sliprules, inelasticity, kinematics, singlecrystal, polycrystal
 from neml import elasticity, drivers, surfaces, hardening, visco_flow, general_flow, models
 
@@ -26,13 +24,13 @@ def cpmodel_fcc_voce(PATH_NEML, YOUNGS, POISSONS, LATTICE_A, SLIP_DIRECTION, SLI
     model = singlecrystal.SingleCrystalModel(kmodel, lattice, verbose=False)
     # Final Crystal Plasticity Model
     cpmodel = polycrystal.TaylorModel(model, GRAIN_ORIENTATIONS, nthreads=NUM_THREADS)
+    cpmodel.save('cpmodel_fcc_voce.xml', 'cpmodel')
 
     return cpmodel 
 
 
 def vpmodel_macro_voce(PATH_NEML, YOUNGS, POISSONS, 
-                       VIHR_s0, VIHR_R, VIHR_d, GPL_n, GPL_eta, 
-                       NUM_THREADS):
+                       VIHR_s0, VIHR_R, VIHR_d, GPL_n, GPL_eta):
 
     import sys
     sys.path.append(PATH_NEML)
@@ -46,6 +44,7 @@ def vpmodel_macro_voce(PATH_NEML, YOUNGS, POISSONS,
     gpower = visco_flow.GPowerLaw(GPL_n, GPL_eta)
     vflow  = visco_flow.PerzynaFlowRule(surface_iso, strengthmodel, gpower)
     integrator = general_flow.TVPFlowRule(emodel, vflow)
-    vpmodel = models.GeneralIntegrator(emodel, integrator, nthreads=NUM_THREADS)
+    vpmodel = models.GeneralIntegrator(emodel, integrator)
+    vpmodel.save('vpmodel_macro_voce.xml', 'vpmodel')
 
     return vpmodel

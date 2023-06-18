@@ -1,0 +1,61 @@
+<materials>
+	<vpmodel type="GeneralIntegrator">
+		<elastic type="IsotropicLinearElasticModel">
+			<m1 type="ConstantInterpolate">
+				<v>211000</v>
+			</m1>
+			<m1_type>youngs</m1_type>
+			<m2 type="ConstantInterpolate">
+				<v>0.3</v>
+			</m2>
+			<m2_type>poissons</m2_type>
+		</elastic>
+		<rule type="TVPFlowRule">
+			<elastic type="IsotropicLinearElasticModel">
+				<m1 type="ConstantInterpolate">
+					<v>211000</v>
+				</m1>
+				<m1_type>youngs</m1_type>
+				<m2 type="ConstantInterpolate">
+					<v>0.3</v>
+				</m2>
+				<m2_type>poissons</m2_type>
+			</elastic>
+			<flow type="PerzynaFlowRule">
+				<surface type="IsoJ2"/>
+				<hardening type="VoceIsotropicHardeningRule">
+					<s0 type="ConstantInterpolate">
+						<v>300</v>
+					</s0>
+					<R type="ConstantInterpolate">
+						<v>2550</v>
+					</R>
+					<d type="ConstantInterpolate">
+						<v>1</v>
+					</d>
+				</hardening>
+				<g type="GPowerLaw">
+					<n type="ConstantInterpolate">
+						<v>1</v>
+					</n>
+					<eta type="ConstantInterpolate">
+						<v>1</v>
+					</eta>
+				</g>
+			</flow>
+		</rule>
+		<alpha type="ConstantInterpolate">
+			<v>0</v>
+		</alpha>
+		<truesdell>true</truesdell>
+		<rtol>1e-08</rtol>
+		<atol>1e-08</atol>
+		<miter>50</miter>
+		<verbose>false</verbose>
+		<linesearch>false</linesearch>
+		<max_divide>4</max_divide>
+		<force_divide>false</force_divide>
+		<skip_first_step>false</skip_first_step>
+	</vpmodel>
+</materials>
+
