@@ -84,7 +84,7 @@ SHEAR       = 81000.0   # E / (2 * (1 + nu)) # Shear modulus
 VSH_TAU_0   = 135       # VoceSlipHardening
 VSH_TAU_SAT = 760       # VoceSlipHardening
 VSH_B       = 0.50      # VoceSlipHardening
-AI_GAMMA0   = 0.001     # PowerLawSlipRule
+AI_GAMMA0   = ERATE/3   # PowerLawSlipRule "0.001"
 AI_N        = 10        # PowerLawSlipRule
 # Lattice & Slip Systems
 LATTICE_A   = 1.0
