@@ -6,7 +6,7 @@ MAIN
 
 NUM_THREADS = 32
 GRAINS_FILE = "input_grainsfile.csv"
-PATH_NEML   = '/home/omz/moose/neml'
+PATH_NEML   = '/home/omux/moose/neml'
 
 import sys
 sys.path.append(PATH_NEML)
@@ -69,7 +69,7 @@ print('------------------------------------')
 print('./> LOADING CONDITIONS')
 print('------------------------------------')
 EMAX   = 0.48 # Maximum strain
-NSTEPS = 50 # Number of steps
+NSTEPS = 50   # Number of steps
 ERATE  = 1.0e-4 # Strain rate
 # -----------------------------------------------------------------------------------
 # MATERIAL PARAMETERS
@@ -81,21 +81,28 @@ YOUNGS      = 211000    # IsotropicLinearElasticModel 211000
 POISSONS    = 0.30      # IsotropicLinearElasticModel
 SHEAR       = 81000.0   # E / (2 * (1 + nu)) # Shear modulus
 # Asaro Inelasticity
-VSH_TAU_0   = 135       # VoceSlipHardening
-VSH_TAU_SAT = 760       # VoceSlipHardening
-VSH_B       = 0.50      # VoceSlipHardening
-AI_GAMMA0   = ERATE/3   # PowerLawSlipRule "0.001"
-AI_N        = 10        # PowerLawSlipRule
+VSH_TAU_0   = 65.41575    # VoceSlipHardening
+VSH_TAU_SAT = 522.489     # VoceSlipHardening
+VSH_B       = 0.258374    # VoceSlipHardening
+AI_GAMMA0   = 3.63533E-05 #round(ERATE/3, 6)   # PowerLawSlipRule "0.001"
+AI_N        = 15          # PowerLawSlipRule
+print('------------------------------------')
+print('VSH_TAU_0   =', VSH_TAU_0)
+print('VSH_TAU_SAT =', VSH_TAU_SAT)
+print('VSH_B       =', VSH_B)
+print('AI_GAMMA0   =', AI_GAMMA0)
+print('AI_N        =', AI_N)
+print('------------------------------------')
 # Lattice & Slip Systems
 LATTICE_A   = 1.0
 SLIP_DIRECTION = [1, 1, 0]
 SLIP_PLANE     = [1, 1, 1]
 # -----------------------------------------------------------------------------------
-VIHR_s0    = 300
-VIHR_R     = 2550
-VIHR_d     = 1
-GPL_n      = 1
-GPL_eta    = 1
+VIHR_s0    = 100.2765
+VIHR_R     = 2060.54
+VIHR_d     = 1.307719
+GPL_n      = 15
+GPL_eta    = 286.853
 # -----------------------------------------------------------------------------------
 # GRAIN ORIENTATIONS
 # -----------------------------------------------------------------------------------
@@ -120,7 +127,8 @@ start_time = time.time()  # simulation start time
 cpmodel = cpmodel_fcc_voce(PATH_NEML, YOUNGS, POISSONS, LATTICE_A, SLIP_DIRECTION, SLIP_PLANE,
                            VSH_TAU_SAT, VSH_B, VSH_TAU_0, AI_GAMMA0, AI_N,
                            GRAIN_ORIENTATIONS, NUM_THREADS)
-result1 = drivers.uniaxial_test(cpmodel, ERATE, emax=EMAX, nsteps=NSTEPS)
+result1 = drivers.uniaxial_test(cpmodel, ERATE, emax=EMAX, nsteps=NSTEPS,
+                                rtol = 1e-6, atol = 1e-10, miter = 100)
 # -----------------------------------------------------------------------------------
 elapsed_time = time.time() - start_time  # simulation end time
 print('\033[92m' + '--------------------------------------' + '\033[0m')

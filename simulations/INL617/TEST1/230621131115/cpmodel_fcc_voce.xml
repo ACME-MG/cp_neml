@@ -1,0 +1,1813 @@
+<materials>
+	<cpmodel type="TaylorModel">
+		<model type="SingleCrystalModel">
+			<kinematics type="StandardKinematicModel">
+				<emodel type="IsotropicLinearElasticModel">
+					<m1 type="ConstantInterpolate">
+						<v>211000</v>
+					</m1>
+					<m1_type>youngs</m1_type>
+					<m2 type="ConstantInterpolate">
+						<v>0.3</v>
+					</m2>
+					<m2_type>poissons</m2_type>
+				</emodel>
+				<imodel type="AsaroInelasticity">
+					<rule type="PowerLawSlipRule">
+						<resistance type="VoceSlipHardening">
+							<tau_sat type="ConstantInterpolate">
+								<v>760</v>
+							</tau_sat>
+							<b type="ConstantInterpolate">
+								<v>0.5</v>
+							</b>
+							<tau_0 type="ConstantInterpolate">
+								<v>135</v>
+							</tau_0>
+							<k type="ConstantInterpolate">
+								<v>0</v>
+							</k>
+							<var_name>strength</var_name>
+						</resistance>
+						<gamma0 type="ConstantInterpolate">
+							<v>3.33333e-05</v>
+						</gamma0>
+						<n type="ConstantInterpolate">
+							<v>10</v>
+						</n>
+					</rule>
+				</imodel>
+			</kinematics>
+			<lattice type="CubicLattice">
+				<a>1</a>
+				<slip_systems>1 1 0 ; 1 1 1 ,</slip_systems>
+				<twin_systems/>
+			</lattice>
+			<initial_rotation type="CrystalOrientation">
+				<angles>0 0 0 </angles>
+				<angle_type>radians</angle_type>
+				<angle_convention>kocks</angle_convention>
+			</initial_rotation>
+			<alpha type="ConstantInterpolate">
+				<v>0</v>
+			</alpha>
+			<update_rotation>true</update_rotation>
+			<rtol>1e-08</rtol>
+			<atol>1e-06</atol>
+			<miter>30</miter>
+			<verbose>false</verbose>
+			<linesearch>false</linesearch>
+			<max_divide>6</max_divide>
+			<postprocessors/>
+			<elastic_predictor>false</elastic_predictor>
+			<fallback_elastic_predictor>true</fallback_elastic_predictor>
+			<force_divide>0</force_divide>
+			<elastic_predictor_first_step>false</elastic_predictor_first_step>
+		</model>
+		<qs>
+			<qs0 type="CrystalOrientation">
+				<angles>127.29 134.4 222.48 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs0>
+			<qs1 type="CrystalOrientation">
+				<angles>36.15 145.36 191.27 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs1>
+			<qs2 type="CrystalOrientation">
+				<angles>10.246 147.04 183.5 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs2>
+			<qs3 type="CrystalOrientation">
+				<angles>263.18 152.22 61.109 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs3>
+			<qs4 type="CrystalOrientation">
+				<angles>91.555 155.75 256.54 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs4>
+			<qs5 type="CrystalOrientation">
+				<angles>128.45 157.47 257.6 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs5>
+			<qs6 type="CrystalOrientation">
+				<angles>248.01 154.84 14.26 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs6>
+			<qs7 type="CrystalOrientation">
+				<angles>355.24 136.55 130.76 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs7>
+			<qs8 type="CrystalOrientation">
+				<angles>68.914 133.09 169.56 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs8>
+			<qs9 type="CrystalOrientation">
+				<angles>316.43 140.74 64.554 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs9>
+			<qs10 type="CrystalOrientation">
+				<angles>331.12 158.98 96.246 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs10>
+			<qs11 type="CrystalOrientation">
+				<angles>30.356 150.31 142.61 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs11>
+			<qs12 type="CrystalOrientation">
+				<angles>42.031 136.56 141.11 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs12>
+			<qs13 type="CrystalOrientation">
+				<angles>35.951 165.06 190.86 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs13>
+			<qs14 type="CrystalOrientation">
+				<angles>235.5 160.45 42.924 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs14>
+			<qs15 type="CrystalOrientation">
+				<angles>126.78 155.42 256.07 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs15>
+			<qs16 type="CrystalOrientation">
+				<angles>61.109 135.86 214.66 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs16>
+			<qs17 type="CrystalOrientation">
+				<angles>49.349 117.29 149 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs17>
+			<qs18 type="CrystalOrientation">
+				<angles>141.74 141.56 263.55 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs18>
+			<qs19 type="CrystalOrientation">
+				<angles>184.11 153 321.49 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs19>
+			<qs20 type="CrystalOrientation">
+				<angles>87.884 123.27 217.63 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs20>
+			<qs21 type="CrystalOrientation">
+				<angles>27.93 157.7 130.64 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs21>
+			<qs22 type="CrystalOrientation">
+				<angles>58.529 128.93 226.36 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs22>
+			<qs23 type="CrystalOrientation">
+				<angles>28.329 158.03 131.24 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs23>
+			<qs24 type="CrystalOrientation">
+				<angles>16.077 120.53 159.4 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs24>
+			<qs25 type="CrystalOrientation">
+				<angles>67.377 152.6 181.47 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs25>
+			<qs26 type="CrystalOrientation">
+				<angles>38.219 116.6 144.85 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs26>
+			<qs27 type="CrystalOrientation">
+				<angles>357.08 158.3 118.44 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs27>
+			<qs28 type="CrystalOrientation">
+				<angles>167.58 164.15 259.28 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs28>
+			<qs29 type="CrystalOrientation">
+				<angles>29.03 164.34 186.3 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs29>
+			<qs30 type="CrystalOrientation">
+				<angles>325.44 146.84 108.45 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs30>
+			<qs31 type="CrystalOrientation">
+				<angles>292.74 150.41 31.113 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs31>
+			<qs32 type="CrystalOrientation">
+				<angles>68.617 135.44 221.17 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs32>
+			<qs33 type="CrystalOrientation">
+				<angles>50.096 170.08 162.22 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs33>
+			<qs34 type="CrystalOrientation">
+				<angles>106.77 126.29 240.02 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs34>
+			<qs35 type="CrystalOrientation">
+				<angles>49.514 117.62 149.49 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs35>
+			<qs36 type="CrystalOrientation">
+				<angles>42.733 137.4 142.43 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs36>
+			<qs37 type="CrystalOrientation">
+				<angles>24.873 147.93 178.47 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs37>
+			<qs38 type="CrystalOrientation">
+				<angles>24.359 140.76 164.74 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs38>
+			<qs39 type="CrystalOrientation">
+				<angles>167.64 165.4 259.18 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs39>
+			<qs40 type="CrystalOrientation">
+				<angles>123.01 129.57 284.31 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs40>
+			<qs41 type="CrystalOrientation">
+				<angles>107.24 126.01 240.61 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs41>
+			<qs42 type="CrystalOrientation">
+				<angles>10.829 148.53 187.82 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs42>
+			<qs43 type="CrystalOrientation">
+				<angles>42.543 137.02 141.79 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs43>
+			<qs44 type="CrystalOrientation">
+				<angles>243.98 158.52 9.0314 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs44>
+			<qs45 type="CrystalOrientation">
+				<angles>195.86 153.34 357.72 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs45>
+			<qs46 type="CrystalOrientation">
+				<angles>341.15 167.17 100.63 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs46>
+			<qs47 type="CrystalOrientation">
+				<angles>170.39 152.25 329.85 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs47>
+			<qs48 type="CrystalOrientation">
+				<angles>74.614 125.95 159.27 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs48>
+			<qs49 type="CrystalOrientation">
+				<angles>67.691 152.73 181.92 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs49>
+			<qs50 type="CrystalOrientation">
+				<angles>106.67 123.68 240.77 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs50>
+			<qs51 type="CrystalOrientation">
+				<angles>167.87 163.73 259.57 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs51>
+			<qs52 type="CrystalOrientation">
+				<angles>271.34 155.43 16.929 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs52>
+			<qs53 type="CrystalOrientation">
+				<angles>312.61 155.24 52.159 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs53>
+			<qs54 type="CrystalOrientation">
+				<angles>86.934 152.44 218.9 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs54>
+			<qs55 type="CrystalOrientation">
+				<angles>103.44 167.19 202.11 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs55>
+			<qs56 type="CrystalOrientation">
+				<angles>61.029 122.8 216.87 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs56>
+			<qs57 type="CrystalOrientation">
+				<angles>352.2 141.17 85.533 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs57>
+			<qs58 type="CrystalOrientation">
+				<angles>75.052 140.54 193.1 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs58>
+			<qs59 type="CrystalOrientation">
+				<angles>272.78 164.98 73.382 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs59>
+			<qs60 type="CrystalOrientation">
+				<angles>167.42 151.82 328.09 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs60>
+			<qs61 type="CrystalOrientation">
+				<angles>168.14 164.18 259.69 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs61>
+			<qs62 type="CrystalOrientation">
+				<angles>288.75 152.31 30.357 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs62>
+			<qs63 type="CrystalOrientation">
+				<angles>3.1741 158.05 132.53 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs63>
+			<qs64 type="CrystalOrientation">
+				<angles>322.99 144.1 109.86 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs64>
+			<qs65 type="CrystalOrientation">
+				<angles>167.4 151 328.29 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs65>
+			<qs66 type="CrystalOrientation">
+				<angles>259.74 164.75 18.263 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs66>
+			<qs67 type="CrystalOrientation">
+				<angles>61.377 122.8 217.68 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs67>
+			<qs68 type="CrystalOrientation">
+				<angles>339.86 168.37 99.406 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs68>
+			<qs69 type="CrystalOrientation">
+				<angles>24.055 141.07 168.63 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs69>
+			<qs70 type="CrystalOrientation">
+				<angles>104.51 123.7 241.91 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs70>
+			<qs71 type="CrystalOrientation">
+				<angles>339.73 167.82 99.467 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs71>
+			<qs72 type="CrystalOrientation">
+				<angles>115.94 125.26 253.95 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs72>
+			<qs73 type="CrystalOrientation">
+				<angles>129.13 138.43 241.92 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs73>
+			<qs74 type="CrystalOrientation">
+				<angles>172.63 150.35 339.67 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs74>
+			<qs75 type="CrystalOrientation">
+				<angles>121.29 129.8 217.67 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs75>
+			<qs76 type="CrystalOrientation">
+				<angles>27.161 124.13 195.12 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs76>
+			<qs77 type="CrystalOrientation">
+				<angles>116.26 124.91 254.42 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs77>
+			<qs78 type="CrystalOrientation">
+				<angles>102.73 167.35 201.48 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs78>
+			<qs79 type="CrystalOrientation">
+				<angles>116.07 125.24 254.09 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs79>
+			<qs80 type="CrystalOrientation">
+				<angles>105.57 119.67 230.62 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs80>
+			<qs81 type="CrystalOrientation">
+				<angles>100.65 116.54 213.58 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs81>
+			<qs82 type="CrystalOrientation">
+				<angles>75.099 140.79 193.39 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs82>
+			<qs83 type="CrystalOrientation">
+				<angles>64.886 120.03 208.98 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs83>
+			<qs84 type="CrystalOrientation">
+				<angles>167.46 151.37 328.17 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs84>
+			<qs85 type="CrystalOrientation">
+				<angles>116.06 140.73 196.34 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs85>
+			<qs86 type="CrystalOrientation">
+				<angles>75.896 134.48 227.65 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs86>
+			<qs87 type="CrystalOrientation">
+				<angles>289.09 143.98 65.438 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs87>
+			<qs88 type="CrystalOrientation">
+				<angles>104.45 163.78 247.44 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs88>
+			<qs89 type="CrystalOrientation">
+				<angles>156.75 153.06 320.31 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs89>
+			<qs90 type="CrystalOrientation">
+				<angles>94.95 105.73 204.11 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs90>
+			<qs91 type="CrystalOrientation">
+				<angles>61.154 122.72 217.28 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs91>
+			<qs92 type="CrystalOrientation">
+				<angles>340.04 167.94 99.722 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs92>
+			<qs93 type="CrystalOrientation">
+				<angles>75.622 134.33 227.06 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs93>
+			<qs94 type="CrystalOrientation">
+				<angles>143.25 129.19 281.15 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs94>
+			<qs95 type="CrystalOrientation">
+				<angles>70.142 167.83 160.17 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs95>
+			<qs96 type="CrystalOrientation">
+				<angles>102.79 167.41 201.5 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs96>
+			<qs97 type="CrystalOrientation">
+				<angles>68.43 163.86 162.1 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs97>
+			<qs98 type="CrystalOrientation">
+				<angles>27.082 124.61 195.38 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs98>
+			<qs99 type="CrystalOrientation">
+				<angles>220.61 154.14 308.44 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs99>
+			<qs100 type="CrystalOrientation">
+				<angles>72.105 167.87 162.1 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs100>
+			<qs101 type="CrystalOrientation">
+				<angles>105.57 163.72 248.81 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs101>
+			<qs102 type="CrystalOrientation">
+				<angles>102.3 124.94 225.37 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs102>
+			<qs103 type="CrystalOrientation">
+				<angles>70.462 119.06 165.35 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs103>
+			<qs104 type="CrystalOrientation">
+				<angles>110.63 153.2 228.06 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs104>
+			<qs105 type="CrystalOrientation">
+				<angles>160.9 164.36 313.61 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs105>
+			<qs106 type="CrystalOrientation">
+				<angles>168.09 164.7 259.72 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs106>
+			<qs107 type="CrystalOrientation">
+				<angles>2.6499 157.5 131.85 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs107>
+			<qs108 type="CrystalOrientation">
+				<angles>172.29 150.35 249.65 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs108>
+			<qs109 type="CrystalOrientation">
+				<angles>267.66 160.11 14.646 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs109>
+			<qs110 type="CrystalOrientation">
+				<angles>29.842 145.26 184.41 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs110>
+			<qs111 type="CrystalOrientation">
+				<angles>143.36 128.94 281.4 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs111>
+			<qs112 type="CrystalOrientation">
+				<angles>87.615 109.46 201.16 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs112>
+			<qs113 type="CrystalOrientation">
+				<angles>52.515 119.58 147.76 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs113>
+			<qs114 type="CrystalOrientation">
+				<angles>183.76 150.7 280.56 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs114>
+			<qs115 type="CrystalOrientation">
+				<angles>255.49 168.66 17.618 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs115>
+			<qs116 type="CrystalOrientation">
+				<angles>100.91 116.12 207.58 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs116>
+			<qs117 type="CrystalOrientation">
+				<angles>168.89 139.67 290.05 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs117>
+			<qs118 type="CrystalOrientation">
+				<angles>2.7631 157.2 131.86 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs118>
+			<qs119 type="CrystalOrientation">
+				<angles>70.313 163.96 164.13 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs119>
+			<qs120 type="CrystalOrientation">
+				<angles>49.37 146.76 224.55 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs120>
+			<qs121 type="CrystalOrientation">
+				<angles>95.066 105.56 204.82 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs121>
+			<qs122 type="CrystalOrientation">
+				<angles>142.27 131.92 278.17 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs122>
+			<qs123 type="CrystalOrientation">
+				<angles>44.346 123.37 148.93 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs123>
+			<qs124 type="CrystalOrientation">
+				<angles>105.28 119.68 230.88 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs124>
+			<qs125 type="CrystalOrientation">
+				<angles>10.197 155.53 178.52 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs125>
+			<qs126 type="CrystalOrientation">
+				<angles>253.27 155.32 23.371 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs126>
+			<qs127 type="CrystalOrientation">
+				<angles>20.775 170.66 180.47 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs127>
+			<qs128 type="CrystalOrientation">
+				<angles>317.32 146.24 55.065 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs128>
+			<qs129 type="CrystalOrientation">
+				<angles>101.2 115.82 208.28 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs129>
+			<qs130 type="CrystalOrientation">
+				<angles>29.666 145.56 184.47 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs130>
+			<qs131 type="CrystalOrientation">
+				<angles>311.77 148.62 63.696 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs131>
+			<qs132 type="CrystalOrientation">
+				<angles>72.945 156.63 200.83 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs132>
+			<qs133 type="CrystalOrientation">
+				<angles>8.5298 137.6 100.04 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs133>
+			<qs134 type="CrystalOrientation">
+				<angles>358.54 144.59 117.16 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs134>
+			<qs135 type="CrystalOrientation">
+				<angles>143.3 128.71 281.56 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs135>
+			<qs136 type="CrystalOrientation">
+				<angles>31.71 136.14 131.98 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs136>
+			<qs137 type="CrystalOrientation">
+				<angles>26.539 128.14 162.25 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs137>
+			<qs138 type="CrystalOrientation">
+				<angles>71.648 139.6 187.47 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs138>
+			<qs139 type="CrystalOrientation">
+				<angles>87.021 143.04 246.64 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs139>
+			<qs140 type="CrystalOrientation">
+				<angles>101.05 132.01 236.71 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs140>
+			<qs141 type="CrystalOrientation">
+				<angles>164.34 148.66 319.69 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs141>
+			<qs142 type="CrystalOrientation">
+				<angles>317.27 146.22 54.927 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs142>
+			<qs143 type="CrystalOrientation">
+				<angles>87.395 142.92 247.23 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs143>
+			<qs144 type="CrystalOrientation">
+				<angles>87.573 143.01 247.51 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs144>
+			<qs145 type="CrystalOrientation">
+				<angles>75.629 146.7 208.85 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs145>
+			<qs146 type="CrystalOrientation">
+				<angles>25.676 126.38 161.38 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs146>
+			<qs147 type="CrystalOrientation">
+				<angles>354.6 138.01 89.718 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs147>
+			<qs148 type="CrystalOrientation">
+				<angles>179.32 143.41 267.87 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs148>
+			<qs149 type="CrystalOrientation">
+				<angles>9.4261 174.77 110.15 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs149>
+			<qs150 type="CrystalOrientation">
+				<angles>310.62 149.1 62.505 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs150>
+			<qs151 type="CrystalOrientation">
+				<angles>254.94 168.45 17.12 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs151>
+			<qs152 type="CrystalOrientation">
+				<angles>261.56 172.62 43.187 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs152>
+			<qs153 type="CrystalOrientation">
+				<angles>72.194 144.74 241.52 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs153>
+			<qs154 type="CrystalOrientation">
+				<angles>159.63 161.28 312.25 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs154>
+			<qs155 type="CrystalOrientation">
+				<angles>318.75 144.82 57.187 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs155>
+			<qs156 type="CrystalOrientation">
+				<angles>258.61 166.97 31.729 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs156>
+			<qs157 type="CrystalOrientation">
+				<angles>317.11 146.39 54.68 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs157>
+			<qs158 type="CrystalOrientation">
+				<angles>315.41 153.96 52.417 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs158>
+			<qs159 type="CrystalOrientation">
+				<angles>91.536 134.55 253.01 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs159>
+			<qs160 type="CrystalOrientation">
+				<angles>105.02 133.43 271.76 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs160>
+			<qs161 type="CrystalOrientation">
+				<angles>104.68 138.39 210.73 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs161>
+			<qs162 type="CrystalOrientation">
+				<angles>16.911 161.08 138.45 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs162>
+			<qs163 type="CrystalOrientation">
+				<angles>311.7 148.44 63.672 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs163>
+			<qs164 type="CrystalOrientation">
+				<angles>156.74 156.9 309.11 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs164>
+			<qs165 type="CrystalOrientation">
+				<angles>9.5522 174.66 110.55 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs165>
+			<qs166 type="CrystalOrientation">
+				<angles>44.104 129.99 193.84 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs166>
+			<qs167 type="CrystalOrientation">
+				<angles>104.35 138.68 210.21 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs167>
+			<qs168 type="CrystalOrientation">
+				<angles>57.967 127.88 197.42 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs168>
+			<qs169 type="CrystalOrientation">
+				<angles>83.425 131.95 196.08 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs169>
+			<qs170 type="CrystalOrientation">
+				<angles>311.64 148.45 63.597 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs170>
+			<qs171 type="CrystalOrientation">
+				<angles>156.72 157.38 309.19 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs171>
+			<qs172 type="CrystalOrientation">
+				<angles>27.446 125.34 166.76 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs172>
+			<qs173 type="CrystalOrientation">
+				<angles>10.627 156.36 178.98 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs173>
+			<qs174 type="CrystalOrientation">
+				<angles>105.18 119.76 230.95 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs174>
+			<qs175 type="CrystalOrientation">
+				<angles>349.27 149.29 114.48 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs175>
+			<qs176 type="CrystalOrientation">
+				<angles>55.821 126.03 203.91 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs176>
+			<qs177 type="CrystalOrientation">
+				<angles>91.934 138.4 251.56 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs177>
+			<qs178 type="CrystalOrientation">
+				<angles>72.606 118.19 174.55 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs178>
+			<qs179 type="CrystalOrientation">
+				<angles>104.65 138.57 210.53 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs179>
+			<qs180 type="CrystalOrientation">
+				<angles>8.8627 174.72 109.75 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs180>
+			<qs181 type="CrystalOrientation">
+				<angles>326.12 156.3 132.49 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs181>
+			<qs182 type="CrystalOrientation">
+				<angles>148.23 151.41 275.6 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs182>
+			<qs183 type="CrystalOrientation">
+				<angles>24.135 141.87 192.4 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs183>
+			<qs184 type="CrystalOrientation">
+				<angles>316.3 153.57 112.37 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs184>
+			<qs185 type="CrystalOrientation">
+				<angles>15.24 126.74 152.6 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs185>
+			<qs186 type="CrystalOrientation">
+				<angles>48.264 126.98 145.15 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs186>
+			<qs187 type="CrystalOrientation">
+				<angles>48.032 126.85 144.79 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs187>
+			<qs188 type="CrystalOrientation">
+				<angles>10.352 156.41 178.84 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs188>
+			<qs189 type="CrystalOrientation">
+				<angles>148.56 156.73 277.18 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs189>
+			<qs190 type="CrystalOrientation">
+				<angles>356.34 171.4 149.49 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs190>
+			<qs191 type="CrystalOrientation">
+				<angles>1.0646 142.84 95.119 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs191>
+			<qs192 type="CrystalOrientation">
+				<angles>113.21 153.11 222.31 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs192>
+			<qs193 type="CrystalOrientation">
+				<angles>33.308 164.16 124.06 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs193>
+			<qs194 type="CrystalOrientation">
+				<angles>39.602 173.85 135.27 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs194>
+			<qs195 type="CrystalOrientation">
+				<angles>106.21 129.56 236.36 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs195>
+			<qs196 type="CrystalOrientation">
+				<angles>15.171 127.21 152.71 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs196>
+			<qs197 type="CrystalOrientation">
+				<angles>22.34 125.68 125.35 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs197>
+			<qs198 type="CrystalOrientation">
+				<angles>315.72 156.91 122.55 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs198>
+			<qs199 type="CrystalOrientation">
+				<angles>232.09 161.41 340.24 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs199>
+			<qs200 type="CrystalOrientation">
+				<angles>230.03 163.55 36.365 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs200>
+			<qs201 type="CrystalOrientation">
+				<angles>347.96 148.56 142.01 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs201>
+			<qs202 type="CrystalOrientation">
+				<angles>104.74 107.86 207.39 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs202>
+			<qs203 type="CrystalOrientation">
+				<angles>114.23 142.26 202.82 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs203>
+			<qs204 type="CrystalOrientation">
+				<angles>24.393 148.77 173.55 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs204>
+			<qs205 type="CrystalOrientation">
+				<angles>20.347 151.75 172.44 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs205>
+			<qs206 type="CrystalOrientation">
+				<angles>104.47 156.18 243.61 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs206>
+			<qs207 type="CrystalOrientation">
+				<angles>71.559 113.1 188.8 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs207>
+			<qs208 type="CrystalOrientation">
+				<angles>169.94 144.19 249.1 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs208>
+			<qs209 type="CrystalOrientation">
+				<angles>1.3633 141.12 123.04 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs209>
+			<qs210 type="CrystalOrientation">
+				<angles>58.184 118.12 198.94 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs210>
+			<qs211 type="CrystalOrientation">
+				<angles>60.726 141.07 233.89 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs211>
+			<qs212 type="CrystalOrientation">
+				<angles>157.33 140.57 309.37 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs212>
+			<qs213 type="CrystalOrientation">
+				<angles>196.99 160.51 294.55 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs213>
+			<qs214 type="CrystalOrientation">
+				<angles>85.5 125.02 170.54 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs214>
+			<qs215 type="CrystalOrientation">
+				<angles>19.939 151.34 154.87 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs215>
+			<qs216 type="CrystalOrientation">
+				<angles>284.24 155.52 26.186 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs216>
+			<qs217 type="CrystalOrientation">
+				<angles>314.28 154.61 110.33 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs217>
+			<qs218 type="CrystalOrientation">
+				<angles>330.32 166.59 101.04 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs218>
+			<qs219 type="CrystalOrientation">
+				<angles>57.352 117.32 197.03 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs219>
+			<qs220 type="CrystalOrientation">
+				<angles>85.255 125.08 170.21 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs220>
+			<qs221 type="CrystalOrientation">
+				<angles>161.7 155.48 283.63 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs221>
+			<qs222 type="CrystalOrientation">
+				<angles>59.488 131.96 208.54 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs222>
+			<qs223 type="CrystalOrientation">
+				<angles>5.5292 121.26 159.01 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs223>
+			<qs224 type="CrystalOrientation">
+				<angles>58.084 117.54 198.06 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs224>
+			<qs225 type="CrystalOrientation">
+				<angles>114.11 141.56 199.08 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs225>
+			<qs226 type="CrystalOrientation">
+				<angles>97.732 113.38 208.52 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs226>
+			<qs227 type="CrystalOrientation">
+				<angles>1.1657 142.81 95.311 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs227>
+			<qs228 type="CrystalOrientation">
+				<angles>348.04 148.16 142.06 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs228>
+			<qs229 type="CrystalOrientation">
+				<angles>1.4452 141.11 122.99 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs229>
+			<qs230 type="CrystalOrientation">
+				<angles>315.15 154.07 111.18 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs230>
+			<qs231 type="CrystalOrientation">
+				<angles>323.76 169.02 87.775 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs231>
+			<qs232 type="CrystalOrientation">
+				<angles>34.416 148.62 122.88 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs232>
+			<qs233 type="CrystalOrientation">
+				<angles>151.55 130.89 292.7 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs233>
+			<qs234 type="CrystalOrientation">
+				<angles>19.582 150.81 171.48 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs234>
+			<qs235 type="CrystalOrientation">
+				<angles>72.391 118.27 174.46 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs235>
+			<qs236 type="CrystalOrientation">
+				<angles>332.49 154.37 146.83 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs236>
+			<qs237 type="CrystalOrientation">
+				<angles>14.04 166.63 133.7 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs237>
+			<qs238 type="CrystalOrientation">
+				<angles>64.907 122.62 178.36 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs238>
+			<qs239 type="CrystalOrientation">
+				<angles>275.39 153.4 72.009 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs239>
+			<qs240 type="CrystalOrientation">
+				<angles>97.825 113.37 208.9 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs240>
+			<qs241 type="CrystalOrientation">
+				<angles>106.92 108.36 212.07 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs241>
+			<qs242 type="CrystalOrientation">
+				<angles>6.2063 155.3 166.96 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs242>
+			<qs243 type="CrystalOrientation">
+				<angles>58.143 117.73 198.21 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs243>
+			<qs244 type="CrystalOrientation">
+				<angles>74.41 152.72 198.12 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs244>
+			<qs245 type="CrystalOrientation">
+				<angles>58.187 117.94 198.65 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs245>
+			<qs246 type="CrystalOrientation">
+				<angles>163.31 129.35 297.49 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs246>
+			<qs247 type="CrystalOrientation">
+				<angles>358.56 142.87 115.16 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs247>
+			<qs248 type="CrystalOrientation">
+				<angles>46.344 130.04 172.41 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs248>
+			<qs249 type="CrystalOrientation">
+				<angles>76.64 126.78 227.39 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs249>
+			<qs250 type="CrystalOrientation">
+				<angles>111.08 156.05 250.63 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs250>
+			<qs251 type="CrystalOrientation">
+				<angles>148.67 130.34 297.25 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs251>
+			<qs252 type="CrystalOrientation">
+				<angles>95.829 117.41 243.03 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs252>
+			<qs253 type="CrystalOrientation">
+				<angles>273.68 154.54 14.64 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs253>
+			<qs254 type="CrystalOrientation">
+				<angles>88.939 116.77 212.6 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs254>
+			<qs255 type="CrystalOrientation">
+				<angles>272.15 154.57 12.927 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs255>
+			<qs256 type="CrystalOrientation">
+				<angles>5.5496 154.99 166.37 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs256>
+			<qs257 type="CrystalOrientation">
+				<angles>339.45 155.87 102.97 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs257>
+			<qs258 type="CrystalOrientation">
+				<angles>60.618 132.59 210.55 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs258>
+			<qs259 type="CrystalOrientation">
+				<angles>339.91 155.59 103.24 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs259>
+			<qs260 type="CrystalOrientation">
+				<angles>60.252 132.38 209.89 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs260>
+			<qs261 type="CrystalOrientation">
+				<angles>149.39 139.45 228.48 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs261>
+			<qs262 type="CrystalOrientation">
+				<angles>76.847 133.44 209.26 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs262>
+			<qs263 type="CrystalOrientation">
+				<angles>306.95 164.5 36.4 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs263>
+			<qs264 type="CrystalOrientation">
+				<angles>72.304 118.34 174 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs264>
+			<qs265 type="CrystalOrientation">
+				<angles>116.36 156.08 256.19 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs265>
+			<qs266 type="CrystalOrientation">
+				<angles>14.772 127.62 134.34 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs266>
+			<qs267 type="CrystalOrientation">
+				<angles>130.86 130.67 247.25 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs267>
+			<qs268 type="CrystalOrientation">
+				<angles>359.34 147.86 92.478 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs268>
+			<qs269 type="CrystalOrientation">
+				<angles>115.94 135.81 195.1 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs269>
+			<qs270 type="CrystalOrientation">
+				<angles>146.12 129.65 298.72 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs270>
+			<qs271 type="CrystalOrientation">
+				<angles>3.3833 170.98 123.39 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs271>
+			<qs272 type="CrystalOrientation">
+				<angles>306.41 164.52 35.982 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs272>
+			<qs273 type="CrystalOrientation">
+				<angles>180.07 176.95 279.03 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs273>
+			<qs274 type="CrystalOrientation">
+				<angles>5.5054 120.32 158.57 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs274>
+			<qs275 type="CrystalOrientation">
+				<angles>146.32 129.23 298.93 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs275>
+			<qs276 type="CrystalOrientation">
+				<angles>127.57 126.92 255.53 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs276>
+			<qs277 type="CrystalOrientation">
+				<angles>209.68 165.07 359.22 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs277>
+			<qs278 type="CrystalOrientation">
+				<angles>113.31 146.81 238.77 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs278>
+			<qs279 type="CrystalOrientation">
+				<angles>155.01 124.58 294.71 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs279>
+			<qs280 type="CrystalOrientation">
+				<angles>164.82 157.01 280.22 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs280>
+			<qs281 type="CrystalOrientation">
+				<angles>172.1 128.01 282.7 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs281>
+			<qs282 type="CrystalOrientation">
+				<angles>71.644 153.64 199.32 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs282>
+			<qs283 type="CrystalOrientation">
+				<angles>167.7 177.89 263.19 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs283>
+			<qs284 type="CrystalOrientation">
+				<angles>117.97 155.75 257.82 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs284>
+			<qs285 type="CrystalOrientation">
+				<angles>167.99 141.96 246.36 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs285>
+			<qs286 type="CrystalOrientation">
+				<angles>59.734 132.27 209.41 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs286>
+			<qs287 type="CrystalOrientation">
+				<angles>1.6602 166.33 88.646 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs287>
+			<qs288 type="CrystalOrientation">
+				<angles>80.711 144.94 208.71 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs288>
+			<qs289 type="CrystalOrientation">
+				<angles>12.667 170.94 128.09 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs289>
+			<qs290 type="CrystalOrientation">
+				<angles>101.68 111.4 214.93 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs290>
+			<qs291 type="CrystalOrientation">
+				<angles>11.983 124 147.77 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs291>
+			<qs292 type="CrystalOrientation">
+				<angles>146.14 129.78 298.36 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs292>
+			<qs293 type="CrystalOrientation">
+				<angles>180.95 177.06 280.05 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs293>
+			<qs294 type="CrystalOrientation">
+				<angles>72.784 118.52 174.9 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs294>
+			<qs295 type="CrystalOrientation">
+				<angles>89.119 116.77 212.58 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs295>
+			<qs296 type="CrystalOrientation">
+				<angles>51.187 122.21 206.72 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs296>
+			<qs297 type="CrystalOrientation">
+				<angles>344.5 170.95 85.357 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs297>
+			<qs298 type="CrystalOrientation">
+				<angles>97.679 135.62 231.72 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs298>
+			<qs299 type="CrystalOrientation">
+				<angles>150.16 131.18 296.61 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs299>
+			<qs300 type="CrystalOrientation">
+				<angles>38.252 130.92 211.79 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs300>
+			<qs301 type="CrystalOrientation">
+				<angles>18.964 151.11 171.04 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs301>
+			<qs302 type="CrystalOrientation">
+				<angles>11.999 152.94 167.23 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs302>
+			<qs303 type="CrystalOrientation">
+				<angles>104.25 141.33 194.96 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs303>
+			<qs304 type="CrystalOrientation">
+				<angles>335.71 168.95 106.8 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs304>
+			<qs305 type="CrystalOrientation">
+				<angles>95.572 121.81 206.37 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs305>
+			<qs306 type="CrystalOrientation">
+				<angles>106.58 137.17 225.24 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs306>
+			<qs307 type="CrystalOrientation">
+				<angles>156.29 137.08 300.91 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs307>
+			<qs308 type="CrystalOrientation">
+				<angles>252.65 163.53 31.313 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs308>
+			<qs309 type="CrystalOrientation">
+				<angles>120.69 157.8 266.96 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs309>
+			<qs310 type="CrystalOrientation">
+				<angles>167.2 141.25 250.19 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs310>
+			<qs311 type="CrystalOrientation">
+				<angles>288.58 158.97 94.553 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs311>
+			<qs312 type="CrystalOrientation">
+				<angles>333.63 158.71 95.105 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs312>
+			<qs313 type="CrystalOrientation">
+				<angles>68.971 121.19 175.25 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs313>
+			<qs314 type="CrystalOrientation">
+				<angles>20.589 157.33 182.33 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs314>
+			<qs315 type="CrystalOrientation">
+				<angles>322.29 177.52 70.676 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs315>
+			<qs316 type="CrystalOrientation">
+				<angles>96.653 133.55 240.95 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs316>
+			<qs317 type="CrystalOrientation">
+				<angles>167.89 142.48 246.45 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs317>
+			<qs318 type="CrystalOrientation">
+				<angles>73.45 118.76 175.94 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs318>
+			<qs319 type="CrystalOrientation">
+				<angles>11.602 145.03 156.16 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs319>
+			<qs320 type="CrystalOrientation">
+				<angles>333.42 166.39 102.12 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs320>
+			<qs321 type="CrystalOrientation">
+				<angles>91.313 110.54 215.67 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs321>
+			<qs322 type="CrystalOrientation">
+				<angles>108.77 157.37 265.66 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs322>
+			<qs323 type="CrystalOrientation">
+				<angles>159.22 139.88 296.25 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs323>
+			<qs324 type="CrystalOrientation">
+				<angles>60.841 126.31 190.98 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs324>
+			<qs325 type="CrystalOrientation">
+				<angles>156.1 137.86 300.66 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs325>
+			<qs326 type="CrystalOrientation">
+				<angles>144.24 123.59 295.03 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs326>
+			<qs327 type="CrystalOrientation">
+				<angles>317.49 177.73 66.01 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs327>
+			<qs328 type="CrystalOrientation">
+				<angles>96.544 133.54 241.28 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs328>
+			<qs329 type="CrystalOrientation">
+				<angles>355.1 139.92 106.51 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs329>
+			<qs330 type="CrystalOrientation">
+				<angles>80.915 148.57 209.23 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs330>
+			<qs331 type="CrystalOrientation">
+				<angles>40.052 127.46 208.95 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs331>
+			<qs332 type="CrystalOrientation">
+				<angles>95.492 122.11 206.2 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs332>
+			<qs333 type="CrystalOrientation">
+				<angles>12.11 145.69 156.57 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs333>
+			<qs334 type="CrystalOrientation">
+				<angles>92.762 170.25 240.89 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs334>
+			<qs335 type="CrystalOrientation">
+				<angles>33.257 148.18 121.44 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs335>
+			<qs336 type="CrystalOrientation">
+				<angles>158.87 140.48 295.96 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs336>
+			<qs337 type="CrystalOrientation">
+				<angles>333.47 173.35 83.395 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs337>
+			<qs338 type="CrystalOrientation">
+				<angles>156.56 137 301.12 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs338>
+			<qs339 type="CrystalOrientation">
+				<angles>96.953 133.32 241.68 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs339>
+			<qs340 type="CrystalOrientation">
+				<angles>333.57 172.93 83.529 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs340>
+			<qs341 type="CrystalOrientation">
+				<angles>357.01 152.04 111.84 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs341>
+			<qs342 type="CrystalOrientation">
+				<angles>50.577 130.94 160.94 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs342>
+			<qs343 type="CrystalOrientation">
+				<angles>139.52 130.94 240.87 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs343>
+			<qs344 type="CrystalOrientation">
+				<angles>113.59 114.67 220.5 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs344>
+			<qs345 type="CrystalOrientation">
+				<angles>337.41 145.49 139.32 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs345>
+			<qs346 type="CrystalOrientation">
+				<angles>22.274 132.26 133.09 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs346>
+			<qs347 type="CrystalOrientation">
+				<angles>123.517 141.828 195.303 </angles>
+				<angle_type>degrees</angle_type>
+				<angle_convention>bunge</angle_convention>
+			</qs347>
+		</qs>
+		<nthreads>32</nthreads>
+		<weights/>
+	</cpmodel>
+</materials>
+
